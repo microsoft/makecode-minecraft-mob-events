@@ -4,7 +4,7 @@ const path = require("path");
 const homeDir = process.argv.length == 2 ? "." : path.resolve(process.argv[2]);
 
 const eventsRaw = fs.readFileSync(path.join(__dirname, "spawn_events.json"), "utf-8");
-const events = JSON.parse(eventsRaw);
+const allEvents = JSON.parse(eventsRaw);
 
 const extName = "makecode-minecraft-mob-events";
 const nsName = "mobEvents";
@@ -14,72 +14,78 @@ const funs = [];
 const apis = [];
 const docs = {};
 
-for (const ent of Object.keys(events)) {
-    const name = events[ent].name;
-    const enumName = formatEnumName(name);
-    const evs = events[ent].events;
+for (const cat of allEvents) {
+	const events = cat["entities"]
+	let i = 10000
+	for (const ent of Object.keys(events)) {
+	    const name = events[ent].name;
+	    const enumName = formatEnumName(name);
+	    const evs = events[ent].events;
 
-    enums.push(`
-    export enum ${enumName} {
-        ${evs.map(e => `//% block="${e.description}"\n${formatEnumName(e.description)},`).join("\n")}
-    }
-    `);
+	    enums.push(`
+	    export enum ${enumName} {
+	        ${evs.map(e => `//% block="${e.description}"\n${formatEnumName(e.description)},`).join("\n")}
+	    }
+	    `);
 
-    funs.push(`
-    function _${enumName}(id: ${enumName}): string {
-        switch (id) {
-            ${evs.map(e => `case ${enumName}.${formatEnumName(e.description)}: return "${e.id}";`).join("\n")}
-            default:
-                player.errorMessage("Unknown ${enumName} value");
-                return undefined;
-        }
-    }
-    `);
+	    funs.push(`
+	    function _${enumName}(id: ${enumName}): string {
+	        switch (id) {
+	            ${evs.map(e => `case ${enumName}.${formatEnumName(e.description)}: return "${e.id}";`).join("\n")}
+	            default:
+	                player.errorMessage("Unknown ${enumName} value");
+	                return undefined;
+	        }
+	    }
+	    `);
 
-    apis.push(`
-        /**
-         * Sends a command to all ${name} entities that are matched by the given selector.
-         * This block uses EntitySelectors from this extension and not TargetSelectors
-         * from the mobs category.
-         *
-         * @param selector An EntitySelector specifying which entities to send the command to
-         * @param command The command to send to the selected entities
-         *
-         */
-        //% blockId=mob_events_${enumName}
-        //% block="send ${name} event $command to $selector"
-        //% selector.shadow=mob_events_create_selector
-        //% help=github:${extName}/docs/${formatDocsPageName(name)}
-        export function execute${enumName}Command(selector: EntitySelector, command: ${enumName}): void {
-            selector._setRule(_EntitySelectorArgument.Type, "${ent}");
-            executeMobEvent(selector, _${enumName}(command));
-        }
-    `);
+	    apis.push(`
+	        /**
+	         * Sends a command to all ${name} entities that are matched by the given selector.
+	         * This block uses EntitySelectors from this extension and not TargetSelectors
+	         * from the mobs category.
+	         *
+	         * @param selector An EntitySelector specifying which entities to send the command to
+	         * @param command The command to send to the selected entities
+	         *
+	         */
+	        //% blockId=mob_events_${enumName}
+	        //% group=${cat["name"]}
+	        //% weight=${i--}
+	        //% block="send ${name} event $command to $selector"
+	        //% selector.shadow=mob_events_create_selector
+	        //% help=github:${extName}/docs/${formatDocsPageName(name)}
+	        export function execute${enumName}Command(selector: EntitySelector, command: ${enumName}): void {
+	            selector._setRule(_EntitySelectorArgument.Type, "${ent}");
+	            executeMobEvent(selector, _${enumName}(command));
+	        }
+	    `);
 
-    docs[formatDocsPageName(name) + ".md"] = `
-    # execute ${name} command
+	    docs[formatDocsPageName(name) + ".md"] = `
+	    # execute ${name} command
 
-    Sends a command to all ${name} entities that are matched by the given selector. This
-    block uses EntitySelectors from this extension and not TargetSelectors from the mobs
-    category.
+	    Sends a command to all ${name} entities that are matched by the given selector. This
+	    block uses EntitySelectors from this extension and not TargetSelectors from the mobs
+	    category.
 
-    \`\`\`sig
-    ${nsName}.execute${enumName}Command(${nsName}.createSelector(), ${enumName}.${formatEnumName(evs[0].description)})
-    \`\`\`
+	    \`\`\`sig
+	    ${nsName}.execute${enumName}Command(${nsName}.createSelector(), ${enumName}.${formatEnumName(evs[0].description)})
+	    \`\`\`
 
-    The blocks in this extension send mob events using the \`/event\` slash command. Not all mob
-    events cause an immediate reaction, some configure the behavior of the mob instead. Try
-    experimenting with events in a variety of situations to see what happens!
+	    The blocks in this extension send mob events using the \`/event\` slash command. Not all mob
+	    events cause an immediate reaction, some configure the behavior of the mob instead. Try
+	    experimenting with events in a variety of situations to see what happens!
 
-    ## Parameters
+	    ## Parameters
 
-    * **selector**: A EntitySelector specifying which entities to send the command to
-    * **command**: A ${enumName} command to send to the selected entities
+	    * **selector**: A EntitySelector specifying which entities to send the command to
+	    * **command**: A ${enumName} command to send to the selected entities
 
-    \`\`\`package
-    ${extName}=github:microsoft/${extName}
-    \`\`\`
-    `;
+	    \`\`\`package
+	    ${extName}=github:microsoft/${extName}
+	    \`\`\`
+	    `;
+	}
 }
 
 let enumOut = "";
@@ -175,7 +181,7 @@ if (fs.existsSync(path.join(homeDir, "pxt.json"))) {
 else {
     config = {
         "name": extName,
-        "version": "0.0.1",
+        "version": "0.0.2",
         "description": "An extension for controlling mobs in MakeCode for Minecraft Education",
         "dependencies": {
             "core": "*"
@@ -194,6 +200,7 @@ config.files = Object.keys(docs).map(d => `docs/${d}`).concat([
     "apis.g.ts",
     "main.ts",
     "README.md",
+    "icon.png"
 ]);
 
 fs.writeFileSync(path.join(homeDir, "pxt.json"), JSON.stringify(config, null, 4), "utf-8");

@@ -1,1225 +1,1245 @@
-{
-    "minecraft:cat": {
-        "name": "cat",
-        "events": [
-            {
-                "id": "minecraft:spawn_from_village",
-                "description": "transform into village cat"
-            },
-            {
-                "id": "minecraft:spawn_midnight_cat",
-                "description": "transform into midnight cat"
-            },
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_tame",
-                "description": "become tame"
+[
+    {
+        "name": "Player",
+        "entities": {
+            "minecraft:player": {
+                "name": "player",
+                "events": [
+                    {
+                        "id": "minecraft:gain_bad_omen",
+                        "description": "gain bad omen"
+                    },
+                    {
+                        "id": "minecraft:clear_add_bad_omen",
+                        "description": "clear bad omen"
+                    },
+                    {
+                        "id": "minecraft:trigger_raid",
+                        "description": "trigger raid"
+                    },
+                    {
+                        "id": "minecraft:remove_raid_trigger",
+                        "description": "remove raid trigger"
+                    }
+                ]
             }
-        ]
+        }
     },
-    "minecraft:cave_spider": {
-        "name": "cave spider",
-        "events": [
-            {
-                "id": "minecraft:become_hostile",
-                "description": "become hostile"
+    {
+        "name": "Animal",
+        "entities": {
+            "minecraft:cat": {
+                "name": "cat",
+                "events": [
+                    {
+                        "id": "minecraft:spawn_from_village",
+                        "description": "transform into village cat"
+                    },
+                    {
+                        "id": "minecraft:spawn_midnight_cat",
+                        "description": "transform into midnight cat"
+                    },
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "become tame"
+                    }
+                ]
             },
-            {
-                "id": "minecraft:become_neutral",
-                "description": "become neutral"
+            "minecraft:chicken": {
+                "name": "chicken",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    }
+                ]
             },
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
+            "minecraft:cow": {
+                "name": "cow",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    }
+                ]
             },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
+            "minecraft:donkey": {
+                "name": "donkey",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "on tame"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_chest",
+                        "description": "put on saddlebags"
+                    },
+                    {
+                        "id": "minecraft:donkey_saddled",
+                        "description": "put on saddle"
+                    },
+                    {
+                        "id": "minecraft:donkey_unsaddled",
+                        "description": "take off saddle"
+                    }
+                ]
+            },
+            "minecraft:fox": {
+                "name": "fox",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:fox_configure_thunderstorm",
+                        "description": "configure for thunderstorm"
+                    },
+                    {
+                        "id": "minecraft:fox_configure_day",
+                        "description": "configure for day"
+                    },
+                    {
+                        "id": "minecraft:fox_configure_night",
+                        "description": "configure for night"
+                    },
+                    {
+                        "id": "minecraft:fox_configure_defending",
+                        "description": "configure for defending"
+                    },
+                    {
+                        "id": "minecraft:fox_configure_docile_day",
+                        "description": "configure for docile day"
+                    },
+                    {
+                        "id": "minecraft:fox_configure_docile_night",
+                        "description": "configure for docile night"
+                    }
+                ]
+            },
+            "minecraft:horse": {
+                "name": "horse",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "become tame"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:horse_saddled",
+                        "description": "put on saddle"
+                    },
+                    {
+                        "id": "minecraft:horse_unsaddled",
+                        "description": "take off saddle"
+                    },
+                    {
+                        "id": "minecraft:make_white",
+                        "description": "transform into white horse"
+                    },
+                    {
+                        "id": "minecraft:make_creamy",
+                        "description": "transform into creamy horse"
+                    },
+                    {
+                        "id": "minecraft:make_chestnut",
+                        "description": "transform into chestnut horse"
+                    },
+                    {
+                        "id": "minecraft:make_brown",
+                        "description": "transform into brown horse"
+                    },
+                    {
+                        "id": "minecraft:make_black",
+                        "description": "transform into black horse"
+                    },
+                    {
+                        "id": "minecraft:make_gray",
+                        "description": "transform into gray horse"
+                    },
+                    {
+                        "id": "minecraft:make_darkbrown",
+                        "description": "transform into darkbrown horse"
+                    }
+                ]
+            },
+            "minecraft:iron_golem": {
+                "name": "iron golem",
+                "events": [
+                    {
+                        "id": "minecraft:from_player",
+                        "description": "become player golem"
+                    },
+                    {
+                        "id": "minecraft:from_village",
+                        "description": "become village golem"
+                    }
+                ]
+            },
+            "minecraft:llama": {
+                "name": "llama",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:from_wandering_trader",
+                        "description": "from wandering trader"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "on tame"
+                    },
+                    {
+                        "id": "minecraft:join_caravan",
+                        "description": "join caravan"
+                    },
+                    {
+                        "id": "minecraft:leave_caravan",
+                        "description": "leave caravan"
+                    },
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    },
+                    {
+                        "id": "minecraft:on_chest",
+                        "description": "put on saddlebags"
+                    }
+                ]
+            },
+            "minecraft:mooshroom": {
+                "name": "mooshroom",
+                "events": [
+                    {
+                        "id": "become_cow",
+                        "description": "transform into a cow"
+                    },
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    }
+                ]
+            },
+            "minecraft:mule": {
+                "name": "mule",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "become tame"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_chest",
+                        "description": "put on saddlebags"
+                    },
+                    {
+                        "id": "minecraft:mule_saddled",
+                        "description": "put on saddle"
+                    },
+                    {
+                        "id": "minecraft:mule_unsaddled",
+                        "description": "take off saddle"
+                    }
+                ]
+            },
+            "minecraft:ocelot": {
+                "name": "ocelot",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:entity_born_wild",
+                        "description": "transform into a wild baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_trust",
+                        "description": "become trusting"
+                    }
+                ]
+            },
+            "minecraft:panda": {
+                "name": "panda",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:panda_lazy",
+                        "description": "become lazy"
+                    },
+                    {
+                        "id": "minecraft:panda_worried",
+                        "description": "become worried"
+                    },
+                    {
+                        "id": "minecraft:panda_playful",
+                        "description": "become playful"
+                    },
+                    {
+                        "id": "minecraft:panda_brown",
+                        "description": "transform into a brown panda"
+                    },
+                    {
+                        "id": "minecraft:panda_weak",
+                        "description": "become weak"
+                    },
+                    {
+                        "id": "minecraft:panda_aggressive",
+                        "description": "become aggressive"
+                    },
+                    {
+                        "id": "minecraft:on_scared",
+                        "description": "become scared"
+                    },
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    }
+                ]
+            },
+            "minecraft:parrot": {
+                "name": "parrot",
+                "events": [
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "become tame"
+                    }
+                ]
+            },
+            "minecraft:pig": {
+                "name": "pig",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_saddled",
+                        "description": "put on saddle"
+                    }
+                ]
+            },
+            "minecraft:polar_bear": {
+                "name": "polar bear",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    },
+                    {
+                        "id": "minecraft:on_anger",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_scared",
+                        "description": "become scared"
+                    }
+                ]
+            },
+            "minecraft:rabbit": {
+                "name": "rabbit",
+                "events": [
+                    {
+                        "id": "in_desert",
+                        "description": "transform into a desert rabbit"
+                    },
+                    {
+                        "id": "in_snow",
+                        "description": "transform into a snow rabiit"
+                    },
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "grow_up",
+                        "description": "transform into an adult"
+                    }
+                ]
+            },
+            "minecraft:sheep": {
+                "name": "sheep",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_sheared",
+                        "description": "on sheared"
+                    },
+                    {
+                        "id": "minecraft:on_eat_block",
+                        "description": "on eat block"
+                    },
+                    {
+                        "id": "wololo",
+                        "description": "wololo"
+                    }
+                ]
+            },
+            "minecraft:skeleton_horse": {
+                "name": "skeleton horse",
+                "events": [
+                    {
+                        "id": "minecraft:set_trap",
+                        "description": "set trap"
+                    },
+                    {
+                        "id": "minecraft:spring_trap",
+                        "description": "spring trap"
+                    }
+                ]
+            },
+            "minecraft:snow_golem": {
+                "name": "snow golem",
+                "events": [
+                    {
+                        "id": "minecraft:on_sheared",
+                        "description": "remove pumpkin head"
+                    }
+                ]
+            },
+            "minecraft:tropicalfish": {
+                "name": "tropicalfish",
+                "events": [
+                    {
+                        "id": "minecraft:become_anenonme",
+                        "description": "transform into anenonme"
+                    },
+                    {
+                        "id": "minecraft:become_black_tang",
+                        "description": "transform into black tang"
+                    },
+                    {
+                        "id": "minecraft:become_blue_dory",
+                        "description": "transform into blue dory"
+                    },
+                    {
+                        "id": "minecraft:become_butterfly_fish",
+                        "description": "transform into butterfly fish"
+                    },
+                    {
+                        "id": "minecraft:become_cichlid",
+                        "description": "transform into cichlid"
+                    },
+                    {
+                        "id": "minecraft:become_clownfish",
+                        "description": "transform into clownfish"
+                    },
+                    {
+                        "id": "minecraft:become_cc_betta",
+                        "description": "transform into cc betta"
+                    },
+                    {
+                        "id": "minecraft:become_dog_fish",
+                        "description": "transform into dog fish"
+                    },
+                    {
+                        "id": "minecraft:become_e_red_snapper",
+                        "description": "transform into e red snapper"
+                    },
+                    {
+                        "id": "minecraft:become_goat_fish",
+                        "description": "transform into goat fish"
+                    },
+                    {
+                        "id": "minecraft:become_moorish_idol",
+                        "description": "transform into moorish idol"
+                    },
+                    {
+                        "id": "minecraft:become_ornate_butterfly",
+                        "description": "transform into ornate butterfly"
+                    },
+                    {
+                        "id": "minecraft:become_parrot_fish",
+                        "description": "transform into parrot fish"
+                    },
+                    {
+                        "id": "minecraft:become_queen_angel_fish",
+                        "description": "transform into queen angel fish"
+                    },
+                    {
+                        "id": "minecraft:become_red_cichlid",
+                        "description": "transform into red cichlid"
+                    },
+                    {
+                        "id": "minecraft:become_red_lipped_benny",
+                        "description": "transform into red lipped benny"
+                    },
+                    {
+                        "id": "minecraft:become_red_snapper",
+                        "description": "transform into red snapper"
+                    },
+                    {
+                        "id": "minecraft:become_threadfin",
+                        "description": "transform into threadfin"
+                    },
+                    {
+                        "id": "minecraft:become_tomato_clown",
+                        "description": "transform into tomato clown"
+                    },
+                    {
+                        "id": "minecraft:become_triggerfish",
+                        "description": "transform into triggerfish"
+                    },
+                    {
+                        "id": "minecraft:become_yellow_tang",
+                        "description": "transform into yellow tang"
+                    },
+                    {
+                        "id": "minecraft:become_yellow_tail_parrot",
+                        "description": "transform into yellow tail parrot"
+                    }
+                ]
+            },
+            "minecraft:turtle": {
+                "name": "turtle",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    }
+                ]
+            },
+            "minecraft:villager_v2": {
+                "name": "villager",
+                "events": [
+                    {
+                        "id": "become_witch",
+                        "description": "transform into a witch"
+                    },
+                    {
+                        "id": "become_zombie",
+                        "description": "transform into a zombie"
+                    },
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:become_unskilled",
+                        "description": "transform into a unskilled"
+                    },
+                    {
+                        "id": "minecraft:become_cleric",
+                        "description": "transform into a cleric"
+                    },
+                    {
+                        "id": "minecraft:become_farmer",
+                        "description": "transform into a farmer"
+                    },
+                    {
+                        "id": "minecraft:become_fisherman",
+                        "description": "transform into a fisherman"
+                    },
+                    {
+                        "id": "minecraft:become_fletcher",
+                        "description": "transform into a fletcher"
+                    },
+                    {
+                        "id": "minecraft:become_librarian",
+                        "description": "transform into a librarian"
+                    },
+                    {
+                        "id": "minecraft:become_cartographer",
+                        "description": "transform into a cartographer"
+                    },
+                    {
+                        "id": "minecraft:become_armorer",
+                        "description": "transform into a armorer"
+                    },
+                    {
+                        "id": "minecraft:become_weaponsmith",
+                        "description": "transform into a weaponsmith"
+                    },
+                    {
+                        "id": "minecraft:become_toolsmith",
+                        "description": "transform into a toolsmith"
+                    },
+                    {
+                        "id": "minecraft:become_butcher",
+                        "description": "transform into a butcher"
+                    },
+                    {
+                        "id": "minecraft:become_leatherworker",
+                        "description": "transform into a leatherworker"
+                    },
+                    {
+                        "id": "minecraft:become_sheperd",
+                        "description": "transform into a shepherd"
+                    },
+                    {
+                        "id": "minecraft:become_mason",
+                        "description": "transform into a mason"
+                    },
+                    {
+                        "id": "minecraft:schedule_wander_villager",
+                        "description": "schedule wander villager"
+                    },
+                    {
+                        "id": "minecraft:schedule_gather_villager",
+                        "description": "schedule gather villager"
+                    },
+                    {
+                        "id": "minecraft:schedule_home_villager",
+                        "description": "schedule home villager"
+                    },
+                    {
+                        "id": "minecraft:schedule_bed_villager",
+                        "description": "schedule bed villager"
+                    },
+                    {
+                        "id": "minecraft:schedule_play_villager",
+                        "description": "schedule play villager"
+                    },
+                    {
+                        "id": "minecraft:schedule_work_pro_villager",
+                        "description": "schedule work pro villager"
+                    },
+                    {
+                        "id": "minecraft:schedule_work_farmer",
+                        "description": "schedule work farmer"
+                    },
+                    {
+                        "id": "minecraft:schedule_work_fisher",
+                        "description": "schedule work fisher"
+                    },
+                    {
+                        "id": "minecraft:schedule_work_librarian",
+                        "description": "schedule work librarian"
+                    },
+                    {
+                        "id": "minecraft:resupply_trades",
+                        "description": "resupply trades"
+                    }
+                ]
+            },
+            "minecraft:wandering_trader": {
+                "name": "wandering trader",
+                "events": [
+                    {
+                        "id": "minecraft:start_despawn",
+                        "description": "start despawn"
+                    },
+                    {
+                        "id": "minecraft:become_scared",
+                        "description": "become scared"
+                    },
+                    {
+                        "id": "minecraft:become_calm",
+                        "description": "become calm"
+                    }
+                ]
+            },
+            "minecraft:wolf": {
+                "name": "wolf",
+                "events": [
+                    {
+                        "id": "minecraft:entity_born",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:on_tame",
+                        "description": "become tame"
+                    },
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    }
+                ]
+            },
+            "minecraft:zombie_horse": {
+                "name": "zombie horse",
+                "events": [
+                    {
+                        "id": "minecraft:ageable_grow_up",
+                        "description": "transform into an adult"
+                    }
+                ]
             }
-        ]
+        }
     },
-    "minecraft:chicken": {
-        "name": "chicken",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
+    {
+        "name": "Monster",
+        "entities": {
+            "minecraft:cave_spider": {
+                "name": "cave spider",
+                "events": [
+                    {
+                        "id": "minecraft:become_hostile",
+                        "description": "become hostile"
+                    },
+                    {
+                        "id": "minecraft:become_neutral",
+                        "description": "become neutral"
+                    },
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    }
+                ]
             },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
+            "minecraft:creeper": {
+                "name": "creeper",
+                "events": [
+                    {
+                        "id": "minecraft:start_exploding_forced",
+                        "description": "start exploding forced"
+                    },
+                    {
+                        "id": "minecraft:stop_exploding",
+                        "description": "stop exploding"
+                    },
+                    {
+                        "id": "minecraft:become_charged",
+                        "description": "become charged"
+                    }
+                ]
+            },
+            "minecraft:drowned": {
+                "name": "drowned",
+                "events": [
+                    {
+                        "id": "minecraft:as_baby",
+                        "description": "transform into baby"
+                    }
+                ]
+            },
+            "minecraft:enderman": {
+                "name": "enderman",
+                "events": [
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    }
+                ]
+            },
+            "minecraft:ender_dragon": {
+                "name": "ender dragon",
+                "events": [
+                    {
+                        "id": "minecraft:start_land",
+                        "description": "start to land"
+                    },
+                    {
+                        "id": "minecraft:start_fly",
+                        "description": "start to fly"
+                    },
+                    {
+                        "id": "minecraft:start_death",
+                        "description": "start death"
+                    }
+                ]
+            },
+            "minecraft:evocation_illager": {
+                "name": "evocation illager",
+                "events": [
+                    {
+                        "id": "minecraft:spawn_for_raid",
+                        "description": "become a raider"
+                    }
+                ]
+            },
+            "minecraft:guardian": {
+                "name": "guardian",
+                "events": [
+                    {
+                        "id": "minecraft:target_too_close",
+                        "description": "target too close"
+                    },
+                    {
+                        "id": "minecraft:target_far_enough",
+                        "description": "target far enough"
+                    }
+                ]
+            },
+            "minecraft:husk": {
+                "name": "husk",
+                "events": [
+                    {
+                        "id": "minecraft:convert_to_zombie",
+                        "description": "start transforming into zombie"
+                    }
+                ]
+            },
+            "minecraft:magma_cube": {
+                "name": "magma cube",
+                "events": [
+                    {
+                        "id": "minecraft:become_calm",
+                        "description": "become calm"
+                    },
+                    {
+                        "id": "minecraft:become_aggressive",
+                        "description": "become aggressive"
+                    }
+                ]
+            },
+            "minecraft:pillager": {
+                "name": "pillager",
+                "events": [
+                    {
+                        "id": "minecraft:spawn_for_raid",
+                        "description": "become a raider"
+                    },
+                    {
+                        "id": "minecraft:promote_to_illager_captain",
+                        "description": "promote to illager captain"
+                    },
+                    {
+                        "id": "minecraft:promote_to_patrol_captain",
+                        "description": "promote to patrol captain"
+                    }
+                ]
+            },
+            "minecraft:ravager": {
+                "name": "ravager",
+                "events": [
+                    {
+                        "id": "minecraft:spawn_for_raid",
+                        "description": "become a raider"
+                    },
+                    {
+                        "id": "minecraft:spawn_for_raid_with_evoker_rider",
+                        "description": "spawn for raid with evoker rider"
+                    },
+                    {
+                        "id": "minecraft:spawn_for_raid_with_pillager_rider",
+                        "description": "spawn for raid with pillager rider"
+                    },
+                    {
+                        "id": "minecraft:spawn_with_pillager_rider",
+                        "description": "gain pillager rider"
+                    },
+                    {
+                        "id": "minecraft:spawn_with_pillager_captain_rider",
+                        "description": "gain pillager captain rider"
+                    },
+                    {
+                        "id": "minecraft:spawn_with_vindicator_rider",
+                        "description": "gain vindicator rider"
+                    },
+                    {
+                        "id": "minecraft:spawn_with_vindicator_captain_rider",
+                        "description": "gain vindicator captain rider"
+                    },
+                    {
+                        "id": "minecraft:become_stunned",
+                        "description": "become stunned"
+                    },
+                    {
+                        "id": "minecraft:start_roar",
+                        "description": "start roar"
+                    },
+                    {
+                        "id": "minecraft:end_roar",
+                        "description": "end roar"
+                    }
+                ]
+            },
+            "minecraft:shulker": {
+                "name": "shulker",
+                "events": [
+                    {
+                        "id": "minecraft:turn_purple",
+                        "description": "turn purple"
+                    },
+                    {
+                        "id": "minecraft:turn_black",
+                        "description": "turn black"
+                    },
+                    {
+                        "id": "minecraft:turn_blue",
+                        "description": "turn blue"
+                    },
+                    {
+                        "id": "minecraft:turn_brown",
+                        "description": "turn brown"
+                    },
+                    {
+                        "id": "minecraft:turn_cyan",
+                        "description": "turn cyan"
+                    },
+                    {
+                        "id": "minecraft:turn_gray",
+                        "description": "turn gray"
+                    },
+                    {
+                        "id": "minecraft:turn_green",
+                        "description": "turn green"
+                    },
+                    {
+                        "id": "minecraft:turn_light_blue",
+                        "description": "turn light blue"
+                    },
+                    {
+                        "id": "minecraft:turn_lime",
+                        "description": "turn lime"
+                    },
+                    {
+                        "id": "minecraft:turn_magenta",
+                        "description": "turn magenta"
+                    },
+                    {
+                        "id": "minecraft:turn_orange",
+                        "description": "turn orange"
+                    },
+                    {
+                        "id": "minecraft:turn_pink",
+                        "description": "turn pink"
+                    },
+                    {
+                        "id": "minecraft:turn_red",
+                        "description": "turn red"
+                    },
+                    {
+                        "id": "minecraft:turn_silver",
+                        "description": "turn silver"
+                    },
+                    {
+                        "id": "minecraft:turn_white",
+                        "description": "turn white"
+                    },
+                    {
+                        "id": "minecraft:turn_yellow",
+                        "description": "turn yellow"
+                    }
+                ]
+            },
+            "minecraft:silverfish": {
+                "name": "silverfish",
+                "events": [
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    }
+                ]
+            },
+            "minecraft:skeleton": {
+                "name": "skeleton",
+                "events": [
+                    {
+                        "id": "minecraft:spring_trap",
+                        "description": "spring trap"
+                    }
+                ]
+            },
+            "minecraft:slime": {
+                "name": "slime",
+                "events": [
+                    {
+                        "id": "minecraft:become_calm",
+                        "description": "become calm"
+                    },
+                    {
+                        "id": "minecraft:become_aggressive",
+                        "description": "become aggressive"
+                    }
+                ]
+            },
+            "minecraft:spider": {
+                "name": "spider",
+                "events": [
+                    {
+                        "id": "minecraft:become_hostile",
+                        "description": "become hostile"
+                    },
+                    {
+                        "id": "minecraft:become_neutral",
+                        "description": "become neutral"
+                    },
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    },
+                    {
+                        "id": "minecraft:become_calm",
+                        "description": "become calm"
+                    }
+                ]
+            },
+            "minecraft:stray": {
+                "name": "stray",
+                "events": [
+                    {
+                        "id": "transform into skeleton",
+                        "description": "change to skeleton"
+                    }
+                ]
+            },
+            "minecraft:vindicator": {
+                "name": "vindicator",
+                "events": [
+                    {
+                        "id": "minecraft:spawn_as_patrol_follower",
+                        "description": "become a patrol follower"
+                    },
+                    {
+                        "id": "minecraft:become_aggro",
+                        "description": "start attacking with axe"
+                    },
+                    {
+                        "id": "minecraft:stop_aggro",
+                        "description": "stop attacking with axe"
+                    },
+                    {
+                        "id": "minecraft:spawn_for_raid",
+                        "description": "become a raider"
+                    },
+                    {
+                        "id": "minecraft:promote_to_illager_captain",
+                        "description": "promote to illager captain"
+                    },
+                    {
+                        "id": "minecraft:promote_to_patrol_captain",
+                        "description": "promote to patrol captain"
+                    }
+                ]
+            },
+            "minecraft:witch": {
+                "name": "witch",
+                "events": [
+                    {
+                        "id": "minecraft:spawn_for_raid",
+                        "description": "become a raider"
+                    }
+                ]
+            },
+            "minecraft:zombie": {
+                "name": "zombie",
+                "events": [
+                    {
+                        "id": "minecraft:as_adult",
+                        "description": "transform into an adult"
+                    },
+                    {
+                        "id": "minecraft:as_baby",
+                        "description": "transform into a baby"
+                    },
+                    {
+                        "id": "minecraft:convert_to_drowned",
+                        "description": "start transforming into drowned"
+                    }
+                ]
+            },
+            "minecraft:zombie_pigman": {
+                "name": "zombie pigman",
+                "events": [
+                    {
+                        "id": "minecraft:on_calm",
+                        "description": "become calm"
+                    },
+                    {
+                        "id": "minecraft:become_angry",
+                        "description": "become angry"
+                    }
+                ]
+            },
+            "minecraft:zombie_villager_v2": {
+                "name": "zombie villager",
+                "events": [
+                    {
+                        "id": "minecraft:become_cleric",
+                        "description": "become cleric"
+                    }
+                ]
             }
-        ]
+        }
     },
-    "minecraft:command_block_minecart": {
-        "name": "command block minecart",
-        "events": [
-            {
-                "id": "minecraft:command_block_activate",
-                "description": "command block activate"
+    {
+        "name": "Item",
+        "entities": {
+            "minecraft:command_block_minecart": {
+                "name": "command block minecart",
+                "events": [
+                    {
+                        "id": "minecraft:command_block_activate",
+                        "description": "command block activate"
+                    },
+                    {
+                        "id": "minecraft:command_block_deactivate",
+                        "description": "command block deactivate"
+                    }
+                ]
             },
-            {
-                "id": "minecraft:command_block_deactivate",
-                "description": "command block deactivate"
+            "minecraft:ender_crystal": {
+                "name": "ender crystal",
+                "events": [
+                    {
+                        "id": "minecraft:crystal_explode",
+                        "description": "explode"
+                    }
+                ]
+            },
+            "minecraft:fireball": {
+                "name": "fireball",
+                "events": [
+                    {
+                        "id": "minecraft:explode",
+                        "description": "explode"
+                    }
+                ]
+            },
+            "minecraft:hopper_minecart": {
+                "name": "hopper minecart",
+                "events": [
+                    {
+                        "id": "minecraft:hopper_activate",
+                        "description": "activate"
+                    },
+                    {
+                        "id": "minecraft:hopper_deactivate",
+                        "description": "deactivate"
+                    }
+                ]
+            },
+            "minecraft:tnt_minecart": {
+                "name": "tnt minecart",
+                "events": [
+                    {
+                        "id": "minecraft:on_prime",
+                        "description": "become primed"
+                    },
+                    {
+                        "id": "minecraft:on_instant_prime",
+                        "description": "explode"
+                    }
+                ]
+            },
+            "minecraft:wither_skull": {
+                "name": "wither skull",
+                "events": [
+                    {
+                        "id": "minecraft:explode",
+                        "description": "explode"
+                    }
+                ]
+            },
+            "minecraft:wither_skull_dangerous": {
+                "name": "wither skull dangerous",
+                "events": [
+                    {
+                        "id": "minecraft:explode",
+                        "description": "explode"
+                    }
+                ]
             }
-        ]
-    },
-    "minecraft:cow": {
-        "name": "cow",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            }
-        ]
-    },
-    "minecraft:creeper": {
-        "name": "creeper",
-        "events": [
-            {
-                "id": "minecraft:start_exploding_forced",
-                "description": "start exploding forced"
-            },
-            {
-                "id": "minecraft:stop_exploding",
-                "description": "stop exploding"
-            },
-            {
-                "id": "minecraft:become_charged",
-                "description": "become charged"
-            }
-        ]
-    },
-    "minecraft:donkey": {
-        "name": "donkey",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:on_tame",
-                "description": "on tame"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_chest",
-                "description": "put on saddlebags"
-            },
-            {
-                "id": "minecraft:donkey_saddled",
-                "description": "put on saddle"
-            },
-            {
-                "id": "minecraft:donkey_unsaddled",
-                "description": "take off saddle"
-            }
-        ]
-    },
-    "minecraft:drowned": {
-        "name": "drowned",
-        "events": [
-            {
-                "id": "minecraft:as_baby",
-                "description": "transform into baby"
-            }
-        ]
-    },
-    "minecraft:enderman": {
-        "name": "enderman",
-        "events": [
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            }
-        ]
-    },
-    "minecraft:ender_crystal": {
-        "name": "ender crystal",
-        "events": [
-            {
-                "id": "minecraft:crystal_explode",
-                "description": "explode"
-            }
-        ]
-    },
-    "minecraft:ender_dragon": {
-        "name": "ender dragon",
-        "events": [
-            {
-                "id": "minecraft:start_land",
-                "description": "start to land"
-            },
-            {
-                "id": "minecraft:start_fly",
-                "description": "start to fly"
-            },
-            {
-                "id": "minecraft:start_death",
-                "description": "start death"
-            }
-        ]
-    },
-    "minecraft:evocation_illager": {
-        "name": "evocation illager",
-        "events": [
-            {
-                "id": "minecraft:spawn_for_raid",
-                "description": "become a raider"
-            }
-        ]
-    },
-    "minecraft:fireball": {
-        "name": "fireball",
-        "events": [
-            {
-                "id": "minecraft:explode",
-                "description": "explode"
-            }
-        ]
-    },
-    "minecraft:fox": {
-        "name": "fox",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:fox_configure_thunderstorm",
-                "description": "configure for thunderstorm"
-            },
-            {
-                "id": "minecraft:fox_configure_day",
-                "description": "configure for day"
-            },
-            {
-                "id": "minecraft:fox_configure_night",
-                "description": "configure for night"
-            },
-            {
-                "id": "minecraft:fox_configure_defending",
-                "description": "configure for defending"
-            },
-            {
-                "id": "minecraft:fox_configure_docile_day",
-                "description": "configure for docile day"
-            },
-            {
-                "id": "minecraft:fox_configure_docile_night",
-                "description": "configure for docile night"
-            }
-        ]
-    },
-    "minecraft:guardian": {
-        "name": "guardian",
-        "events": [
-            {
-                "id": "minecraft:target_too_close",
-                "description": "target too close"
-            },
-            {
-                "id": "minecraft:target_far_enough",
-                "description": "target far enough"
-            }
-        ]
-    },
-    "minecraft:hopper_minecart": {
-        "name": "hopper minecart",
-        "events": [
-            {
-                "id": "minecraft:hopper_activate",
-                "description": "activate"
-            },
-            {
-                "id": "minecraft:hopper_deactivate",
-                "description": "deactivate"
-            }
-        ]
-    },
-    "minecraft:horse": {
-        "name": "horse",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:on_tame",
-                "description": "become tame"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:horse_saddled",
-                "description": "put on saddle"
-            },
-            {
-                "id": "minecraft:horse_unsaddled",
-                "description": "take off saddle"
-            },
-            {
-                "id": "minecraft:make_white",
-                "description": "transform into white horse"
-            },
-            {
-                "id": "minecraft:make_creamy",
-                "description": "transform into creamy horse"
-            },
-            {
-                "id": "minecraft:make_chestnut",
-                "description": "transform into chestnut horse"
-            },
-            {
-                "id": "minecraft:make_brown",
-                "description": "transform into brown horse"
-            },
-            {
-                "id": "minecraft:make_black",
-                "description": "transform into black horse"
-            },
-            {
-                "id": "minecraft:make_gray",
-                "description": "transform into gray horse"
-            },
-            {
-                "id": "minecraft:make_darkbrown",
-                "description": "transform into darkbrown horse"
-            }
-        ]
-    },
-    "minecraft:husk": {
-        "name": "husk",
-        "events": [
-            {
-                "id": "minecraft:convert_to_zombie",
-                "description": "start transforming into zombie"
-            }
-        ]
-    },
-    "minecraft:iron_golem": {
-        "name": "iron golem",
-        "events": [
-            {
-                "id": "minecraft:from_player",
-                "description": "become player golem"
-            },
-            {
-                "id": "minecraft:from_village",
-                "description": "become village golem"
-            }
-        ]
-    },
-    "minecraft:llama": {
-        "name": "llama",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:from_wandering_trader",
-                "description": "from wandering trader"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_tame",
-                "description": "on tame"
-            },
-            {
-                "id": "minecraft:join_caravan",
-                "description": "join caravan"
-            },
-            {
-                "id": "minecraft:leave_caravan",
-                "description": "leave caravan"
-            },
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            },
-            {
-                "id": "minecraft:on_chest",
-                "description": "put on saddlebags"
-            }
-        ]
-    },
-    "minecraft:magma_cube": {
-        "name": "magma cube",
-        "events": [
-            {
-                "id": "minecraft:become_calm",
-                "description": "become calm"
-            },
-            {
-                "id": "minecraft:become_aggressive",
-                "description": "become aggressive"
-            }
-        ]
-    },
-    "minecraft:mooshroom": {
-        "name": "mooshroom",
-        "events": [
-            {
-                "id": "become_cow",
-                "description": "transform into a cow"
-            },
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            }
-        ]
-    },
-    "minecraft:mule": {
-        "name": "mule",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:on_tame",
-                "description": "become tame"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_chest",
-                "description": "put on saddlebags"
-            },
-            {
-                "id": "minecraft:mule_saddled",
-                "description": "put on saddle"
-            },
-            {
-                "id": "minecraft:mule_unsaddled",
-                "description": "take off saddle"
-            }
-        ]
-    },
-    "minecraft:ocelot": {
-        "name": "ocelot",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:entity_born_wild",
-                "description": "transform into a wild baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_trust",
-                "description": "become trusting"
-            }
-        ]
-    },
-    "minecraft:panda": {
-        "name": "panda",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:panda_lazy",
-                "description": "become lazy"
-            },
-            {
-                "id": "minecraft:panda_worried",
-                "description": "become worried"
-            },
-            {
-                "id": "minecraft:panda_playful",
-                "description": "become playful"
-            },
-            {
-                "id": "minecraft:panda_brown",
-                "description": "transform into a brown panda"
-            },
-            {
-                "id": "minecraft:panda_weak",
-                "description": "become weak"
-            },
-            {
-                "id": "minecraft:panda_aggressive",
-                "description": "become aggressive"
-            },
-            {
-                "id": "minecraft:on_scared",
-                "description": "become scared"
-            },
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            }
-        ]
-    },
-    "minecraft:parrot": {
-        "name": "parrot",
-        "events": [
-            {
-                "id": "minecraft:on_tame",
-                "description": "become tame"
-            }
-        ]
-    },
-    "minecraft:pig": {
-        "name": "pig",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_saddled",
-                "description": "put on saddle"
-            }
-        ]
-    },
-    "minecraft:pillager": {
-        "name": "pillager",
-        "events": [
-            {
-                "id": "minecraft:spawn_for_raid",
-                "description": "become a raider"
-            },
-            {
-                "id": "minecraft:promote_to_illager_captain",
-                "description": "promote to illager captain"
-            },
-            {
-                "id": "minecraft:promote_to_patrol_captain",
-                "description": "promote to patrol captain"
-            }
-        ]
-    },
-    "minecraft:player": {
-        "name": "player",
-        "events": [
-            {
-                "id": "minecraft:gain_bad_omen",
-                "description": "gain bad omen"
-            },
-            {
-                "id": "minecraft:clear_add_bad_omen",
-                "description": "clear bad omen"
-            },
-            {
-                "id": "minecraft:trigger_raid",
-                "description": "trigger raid"
-            },
-            {
-                "id": "minecraft:remove_raid_trigger",
-                "description": "remove raid trigger"
-            }
-        ]
-    },
-    "minecraft:polar_bear": {
-        "name": "polar bear",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            },
-            {
-                "id": "minecraft:on_anger",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:on_scared",
-                "description": "become scared"
-            }
-        ]
-    },
-    "minecraft:rabbit": {
-        "name": "rabbit",
-        "events": [
-            {
-                "id": "in_desert",
-                "description": "transform into a desert rabbit"
-            },
-            {
-                "id": "in_snow",
-                "description": "transform into a snow rabiit"
-            },
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "grow_up",
-                "description": "transform into an adult"
-            }
-        ]
-    },
-    "minecraft:ravager": {
-        "name": "ravager",
-        "events": [
-            {
-                "id": "minecraft:spawn_for_raid",
-                "description": "become a raider"
-            },
-            {
-                "id": "minecraft:spawn_for_raid_with_evoker_rider",
-                "description": "spawn for raid with evoker rider"
-            },
-            {
-                "id": "minecraft:spawn_for_raid_with_pillager_rider",
-                "description": "spawn for raid with pillager rider"
-            },
-            {
-                "id": "minecraft:spawn_with_pillager_rider",
-                "description": "gain pillager rider"
-            },
-            {
-                "id": "minecraft:spawn_with_pillager_captain_rider",
-                "description": "gain pillager captain rider"
-            },
-            {
-                "id": "minecraft:spawn_with_vindicator_rider",
-                "description": "gain vindicator rider"
-            },
-            {
-                "id": "minecraft:spawn_with_vindicator_captain_rider",
-                "description": "gain vindicator captain rider"
-            },
-            {
-                "id": "minecraft:become_stunned",
-                "description": "become stunned"
-            },
-            {
-                "id": "minecraft:start_roar",
-                "description": "start roar"
-            },
-            {
-                "id": "minecraft:end_roar",
-                "description": "end roar"
-            }
-        ]
-    },
-    "minecraft:sheep": {
-        "name": "sheep",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_sheared",
-                "description": "on sheared"
-            },
-            {
-                "id": "minecraft:on_eat_block",
-                "description": "on eat block"
-            },
-            {
-                "id": "wololo",
-                "description": "wololo"
-            }
-        ]
-    },
-    "minecraft:shulker": {
-        "name": "shulker",
-        "events": [
-            {
-                "id": "minecraft:turn_purple",
-                "description": "turn purple"
-            },
-            {
-                "id": "minecraft:turn_black",
-                "description": "turn black"
-            },
-            {
-                "id": "minecraft:turn_blue",
-                "description": "turn blue"
-            },
-            {
-                "id": "minecraft:turn_brown",
-                "description": "turn brown"
-            },
-            {
-                "id": "minecraft:turn_cyan",
-                "description": "turn cyan"
-            },
-            {
-                "id": "minecraft:turn_gray",
-                "description": "turn gray"
-            },
-            {
-                "id": "minecraft:turn_green",
-                "description": "turn green"
-            },
-            {
-                "id": "minecraft:turn_light_blue",
-                "description": "turn light blue"
-            },
-            {
-                "id": "minecraft:turn_lime",
-                "description": "turn lime"
-            },
-            {
-                "id": "minecraft:turn_magenta",
-                "description": "turn magenta"
-            },
-            {
-                "id": "minecraft:turn_orange",
-                "description": "turn orange"
-            },
-            {
-                "id": "minecraft:turn_pink",
-                "description": "turn pink"
-            },
-            {
-                "id": "minecraft:turn_red",
-                "description": "turn red"
-            },
-            {
-                "id": "minecraft:turn_silver",
-                "description": "turn silver"
-            },
-            {
-                "id": "minecraft:turn_white",
-                "description": "turn white"
-            },
-            {
-                "id": "minecraft:turn_yellow",
-                "description": "turn yellow"
-            }
-        ]
-    },
-    "minecraft:silverfish": {
-        "name": "silverfish",
-        "events": [
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            }
-        ]
-    },
-    "minecraft:skeleton": {
-        "name": "skeleton",
-        "events": [
-            {
-                "id": "minecraft:spring_trap",
-                "description": "spring trap"
-            }
-        ]
-    },
-    "minecraft:skeleton_horse": {
-        "name": "skeleton horse",
-        "events": [
-            {
-                "id": "minecraft:set_trap",
-                "description": "set trap"
-            },
-            {
-                "id": "minecraft:spring_trap",
-                "description": "spring trap"
-            }
-        ]
-    },
-    "minecraft:slime": {
-        "name": "slime",
-        "events": [
-            {
-                "id": "minecraft:become_calm",
-                "description": "become calm"
-            },
-            {
-                "id": "minecraft:become_aggressive",
-                "description": "become aggressive"
-            }
-        ]
-    },
-    "minecraft:snow_golem": {
-        "name": "snow golem",
-        "events": [
-            {
-                "id": "minecraft:on_sheared",
-                "description": "remove pumpkin head"
-            }
-        ]
-    },
-    "minecraft:spider": {
-        "name": "spider",
-        "events": [
-            {
-                "id": "minecraft:become_hostile",
-                "description": "become hostile"
-            },
-            {
-                "id": "minecraft:become_neutral",
-                "description": "become neutral"
-            },
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:become_calm",
-                "description": "become calm"
-            }
-        ]
-    },
-    "minecraft:stray": {
-        "name": "stray",
-        "events": [
-            {
-                "id": "transform into skeleton",
-                "description": "change to skeleton"
-            }
-        ]
-    },
-    "minecraft:tnt_minecart": {
-        "name": "tnt minecart",
-        "events": [
-            {
-                "id": "minecraft:on_prime",
-                "description": "become primed"
-            },
-            {
-                "id": "minecraft:on_instant_prime",
-                "description": "explode"
-            }
-        ]
-    },
-    "minecraft:tropicalfish": {
-        "name": "tropicalfish",
-        "events": [
-            {
-                "id": "minecraft:become_anenonme",
-                "description": "transform into anenonme"
-            },
-            {
-                "id": "minecraft:become_black_tang",
-                "description": "transform into black tang"
-            },
-            {
-                "id": "minecraft:become_blue_dory",
-                "description": "transform into blue dory"
-            },
-            {
-                "id": "minecraft:become_butterfly_fish",
-                "description": "transform into butterfly fish"
-            },
-            {
-                "id": "minecraft:become_cichlid",
-                "description": "transform into cichlid"
-            },
-            {
-                "id": "minecraft:become_clownfish",
-                "description": "transform into clownfish"
-            },
-            {
-                "id": "minecraft:become_cc_betta",
-                "description": "transform into cc betta"
-            },
-            {
-                "id": "minecraft:become_dog_fish",
-                "description": "transform into dog fish"
-            },
-            {
-                "id": "minecraft:become_e_red_snapper",
-                "description": "transform into e red snapper"
-            },
-            {
-                "id": "minecraft:become_goat_fish",
-                "description": "transform into goat fish"
-            },
-            {
-                "id": "minecraft:become_moorish_idol",
-                "description": "transform into moorish idol"
-            },
-            {
-                "id": "minecraft:become_ornate_butterfly",
-                "description": "transform into ornate butterfly"
-            },
-            {
-                "id": "minecraft:become_parrot_fish",
-                "description": "transform into parrot fish"
-            },
-            {
-                "id": "minecraft:become_queen_angel_fish",
-                "description": "transform into queen angel fish"
-            },
-            {
-                "id": "minecraft:become_red_cichlid",
-                "description": "transform into red cichlid"
-            },
-            {
-                "id": "minecraft:become_red_lipped_benny",
-                "description": "transform into red lipped benny"
-            },
-            {
-                "id": "minecraft:become_red_snapper",
-                "description": "transform into red snapper"
-            },
-            {
-                "id": "minecraft:become_threadfin",
-                "description": "transform into threadfin"
-            },
-            {
-                "id": "minecraft:become_tomato_clown",
-                "description": "transform into tomato clown"
-            },
-            {
-                "id": "minecraft:become_triggerfish",
-                "description": "transform into triggerfish"
-            },
-            {
-                "id": "minecraft:become_yellow_tang",
-                "description": "transform into yellow tang"
-            },
-            {
-                "id": "minecraft:become_yellow_tail_parrot",
-                "description": "transform into yellow tail parrot"
-            }
-        ]
-    },
-    "minecraft:turtle": {
-        "name": "turtle",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            }
-        ]
-    },
-    "minecraft:villager_v2": {
-        "name": "villager",
-        "events": [
-            {
-                "id": "become_witch",
-                "description": "transform into a witch"
-            },
-            {
-                "id": "become_zombie",
-                "description": "transform into a zombie"
-            },
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:become_unskilled",
-                "description": "transform into a unskilled"
-            },
-            {
-                "id": "minecraft:become_cleric",
-                "description": "transform into a cleric"
-            },
-            {
-                "id": "minecraft:become_farmer",
-                "description": "transform into a farmer"
-            },
-            {
-                "id": "minecraft:become_fisherman",
-                "description": "transform into a fisherman"
-            },
-            {
-                "id": "minecraft:become_fletcher",
-                "description": "transform into a fletcher"
-            },
-            {
-                "id": "minecraft:become_librarian",
-                "description": "transform into a librarian"
-            },
-            {
-                "id": "minecraft:become_cartographer",
-                "description": "transform into a cartographer"
-            },
-            {
-                "id": "minecraft:become_armorer",
-                "description": "transform into a armorer"
-            },
-            {
-                "id": "minecraft:become_weaponsmith",
-                "description": "transform into a weaponsmith"
-            },
-            {
-                "id": "minecraft:become_toolsmith",
-                "description": "transform into a toolsmith"
-            },
-            {
-                "id": "minecraft:become_butcher",
-                "description": "transform into a butcher"
-            },
-            {
-                "id": "minecraft:become_leatherworker",
-                "description": "transform into a leatherworker"
-            },
-            {
-                "id": "minecraft:become_sheperd",
-                "description": "transform into a shepherd"
-            },
-            {
-                "id": "minecraft:become_mason",
-                "description": "transform into a mason"
-            },
-            {
-                "id": "minecraft:schedule_wander_villager",
-                "description": "schedule wander villager"
-            },
-            {
-                "id": "minecraft:schedule_gather_villager",
-                "description": "schedule gather villager"
-            },
-            {
-                "id": "minecraft:schedule_home_villager",
-                "description": "schedule home villager"
-            },
-            {
-                "id": "minecraft:schedule_bed_villager",
-                "description": "schedule bed villager"
-            },
-            {
-                "id": "minecraft:schedule_play_villager",
-                "description": "schedule play villager"
-            },
-            {
-                "id": "minecraft:schedule_work_pro_villager",
-                "description": "schedule work pro villager"
-            },
-            {
-                "id": "minecraft:schedule_work_farmer",
-                "description": "schedule work farmer"
-            },
-            {
-                "id": "minecraft:schedule_work_fisher",
-                "description": "schedule work fisher"
-            },
-            {
-                "id": "minecraft:schedule_work_librarian",
-                "description": "schedule work librarian"
-            },
-            {
-                "id": "minecraft:resupply_trades",
-                "description": "resupply trades"
-            }
-        ]
-    },
-    "minecraft:vindicator": {
-        "name": "vindicator",
-        "events": [
-            {
-                "id": "minecraft:spawn_as_patrol_follower",
-                "description": "become a patrol follower"
-            },
-            {
-                "id": "minecraft:become_aggro",
-                "description": "start attacking with axe"
-            },
-            {
-                "id": "minecraft:stop_aggro",
-                "description": "stop attacking with axe"
-            },
-            {
-                "id": "minecraft:spawn_for_raid",
-                "description": "become a raider"
-            },
-            {
-                "id": "minecraft:promote_to_illager_captain",
-                "description": "promote to illager captain"
-            },
-            {
-                "id": "minecraft:promote_to_patrol_captain",
-                "description": "promote to patrol captain"
-            }
-        ]
-    },
-    "minecraft:wandering_trader": {
-        "name": "wandering trader",
-        "events": [
-            {
-                "id": "minecraft:start_despawn",
-                "description": "start despawn"
-            },
-            {
-                "id": "minecraft:become_scared",
-                "description": "become scared"
-            },
-            {
-                "id": "minecraft:become_calm",
-                "description": "become calm"
-            }
-        ]
-    },
-    "minecraft:witch": {
-        "name": "witch",
-        "events": [
-            {
-                "id": "minecraft:spawn_for_raid",
-                "description": "become a raider"
-            }
-        ]
-    },
-    "minecraft:wither_skull": {
-        "name": "wither skull",
-        "events": [
-            {
-                "id": "minecraft:explode",
-                "description": "explode"
-            }
-        ]
-    },
-    "minecraft:wither_skull_dangerous": {
-        "name": "wither skull dangerous",
-        "events": [
-            {
-                "id": "minecraft:explode",
-                "description": "explode"
-            }
-        ]
-    },
-    "minecraft:wolf": {
-        "name": "wolf",
-        "events": [
-            {
-                "id": "minecraft:entity_born",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:on_tame",
-                "description": "become tame"
-            },
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            },
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            }
-        ]
-    },
-    "minecraft:zombie": {
-        "name": "zombie",
-        "events": [
-            {
-                "id": "minecraft:as_adult",
-                "description": "transform into an adult"
-            },
-            {
-                "id": "minecraft:as_baby",
-                "description": "transform into a baby"
-            },
-            {
-                "id": "minecraft:convert_to_drowned",
-                "description": "start transforming into drowned"
-            }
-        ]
-    },
-    "minecraft:zombie_horse": {
-        "name": "zombie horse",
-        "events": [
-            {
-                "id": "minecraft:ageable_grow_up",
-                "description": "transform into an adult"
-            }
-        ]
-    },
-    "minecraft:zombie_pigman": {
-        "name": "zombie pigman",
-        "events": [
-            {
-                "id": "minecraft:on_calm",
-                "description": "become calm"
-            },
-            {
-                "id": "minecraft:become_angry",
-                "description": "become angry"
-            }
-        ]
-    },
-    "minecraft:zombie_villager_v2": {
-        "name": "zombie villager",
-        "events": [
-            {
-                "id": "minecraft:become_cleric",
-                "description": "become cleric"
-            }
-        ]
+        }
     }
-}
+]

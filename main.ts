@@ -1,5 +1,5 @@
-//% block="Mob Events"
-//% color="#7e42f5"
+//% block="Mob Events" weight=55
+//% color="#7e42f5" icon="\uf1b0"
 namespace mobEvents {
     export enum _EntitySelectorArgument {
         Type,
@@ -46,7 +46,9 @@ namespace mobEvents {
                 }
             }
 
-            const selector = `@e[${this.rules.map(r => `${r.argument}=${r.value}`).join(",")}]`;
+            const selector = this.rules.length > 0
+                ? `@e[${this.rules.map(r => `${r.argument}=${r.value}`).join(",")}]`
+                : "@e"
 
             this.rules = savedRules;
 
