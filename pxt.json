@@ -1,6 +1,7 @@
 {
     "name": "makecode-minecraft-mob-events",
-    "version": "0.0.1",
+    "displayName": "Mob Events",
+    "version": "0.0.2",
     "description": "An extension for controlling mobs in MakeCode for Minecraft Education",
     "dependencies": {
         "core": "*"
